@@ -25,6 +25,7 @@ export interface PayStackProps {
     autoStart?: boolean;
     activityIndicatorColor?: string;
     ref: React.ReactElement;
+    splitCode?: string;
 }
 export interface PayStackRef {
     startTransaction: () => void;
