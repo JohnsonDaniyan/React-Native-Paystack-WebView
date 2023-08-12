@@ -1,4 +1,5 @@
 import * as React from 'react';
+
 export type Currency = 'NGN' | 'GHS' | 'USD' | 'ZAR';
 
 export type PaymentChannels = 'bank' | 'card' | 'qr' | 'ussd' | 'mobile_money';
@@ -12,6 +13,7 @@ interface SuccessResponse extends Response {
 }
 
 export interface PayStackProps {
+  splitCode: string;
   paystackKey: string;
   billingEmail: string;
   firstName?: string;

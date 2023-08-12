@@ -1,14 +1,16 @@
 import * as React from 'react'
-import { useState, useEffect, forwardRef, useRef, useImperativeHandle } from 'react';
-import { Modal, View, ActivityIndicator, SafeAreaView } from 'react-native';
-import { WebView, WebViewNavigation } from 'react-native-webview';
-import { getAmountValueInKobo, getChannels } from './helper';
+
+import { ActivityIndicator, Modal, SafeAreaView, View } from 'react-native';
 import { PayStackProps, PayStackRef } from './types';
+import { WebView, WebViewNavigation } from 'react-native-webview';
+import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
+import { getAmountValueInKobo, getChannels } from './helper';
 
 const CLOSE_URL = 'https://standard.paystack.co/close';
 
 const Paystack: React.ForwardRefRenderFunction<React.ReactNode, PayStackProps> = (
   {
+    splitCode,
     paystackKey,
     billingEmail,
     phone,
@@ -67,6 +69,7 @@ const Paystack: React.ForwardRefRenderFunction<React.ReactNode, PayStackProps> =
               window.onload = payWithPaystack;
               function payWithPaystack(){
               var handler = PaystackPop.setup({ 
+                split_code: '${splitCode}',
                 key: '${paystackKey}',
                 email: '${billingEmail}',
                 firstname: '${firstName}',
