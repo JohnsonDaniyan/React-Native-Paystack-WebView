@@ -9,6 +9,7 @@ interface SuccessResponse extends Response {
     data?: any;
 }
 export interface PayStackProps {
+    splitCode: string;
     paystackKey: string;
     billingEmail: string;
     firstName?: string;
