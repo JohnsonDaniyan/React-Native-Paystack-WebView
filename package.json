@@ -26,7 +26,7 @@
     "!xcuserdata"
   ],
   "scripts": {
-    "compile": "rm -rf lib && tsc -p .",
+    "compile": "rimraf ./lib && tsc -p ./tsconfig.json",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "prepare": "yarn compile",
     "test": "jest"
@@ -68,6 +68,7 @@
   },
   "dependencies": {
     "react-native-webview": "*",
+    "rimraf": "^5.0.1",
     "validator": "^13.6.0"
   }
 }

@@ -3,7 +3,9 @@
     "declaration": true,
     "esModuleInterop": true,
     "jsx": "react-native",
-    "lib": ["ESNext"],
+    "lib": [
+      "ESNext"
+    ],
     "module": "CommonJS",
     "noEmitOnError": true,
     "outDir": "./lib",
@@ -11,8 +13,14 @@
     "sourceMap": true,
     "strict": true,
     "target": "ESNext",
-    "typeRoots": ["./lib/types"]
+    "typeRoots": [
+      "./lib/types"
+    ]
   },
-  "exclude": ["**/__tests__/*"],
-  "include": ["src"]
+  "exclude": [
+    "**/__tests__/*"
+  ],
+  "include": [
+    "src"
+  ]
 }
